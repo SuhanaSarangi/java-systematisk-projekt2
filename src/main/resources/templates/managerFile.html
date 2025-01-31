@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manager Files</title>
+</head>
+<body>
+<h2>Manager Files</h2>
+<ul>
+  <th:block th:each="doc : ${managerFiles}">
+    <li>
+      <strong>Title:</strong> <span th:text="${doc.title}"></span><br>
+      <strong>InfoText:</strong> <span th:text="${doc.infoText}"></span>
+    </li>
+  </th:block>
+</ul>
+
+<form th:action="@{/logout}" method="post">
+  <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Documents</title>
+</head>
+<body>
+<h2>Admin Documents</h2>
+<ul>
+    <th:block th:each="doc : ${adminDocuments}">
+        <li>
+            <strong>Title:</strong> <span th:text="${doc.title}"></span><br>
+            <strong>Description:</strong> <span th:text="${doc.description}"></span>
+        </li>
+    </th:block>
+</ul>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>
